@@ -11729,10 +11729,10 @@ local.assetsDict['/favicon.ico'] = '';
                         onNext(local._debugTryCatchErrorCaught);
                         return;
                     }
-                    console.error('\nbrowserTest - merging test-report from ' +
-                        options.fileTestReport + '\n');
                     if (!options.modeTestIgnore) {
                         local.testReportMerge(local.testReport, data);
+                        console.error('\nbrowserTest - merged test-report from file://' +
+                            options.fileTestReport + '\n');
                     }
                     // create test-report.json
                     local.fs.writeFileSync(
@@ -15518,8 +15518,6 @@ instruction\n\
             local.assetsDict['/assets.utility2.rollup.js'];
         // merge previous test-report
         if (local.env.npm_config_file_test_report_merge) {
-            console.error('merging file://' + local.env.npm_config_file_test_report_merge +
-                ' to test-report');
             local.testReportMerge(
                 local.testReport,
                 JSON.parse(local.tryCatchReadFile(
@@ -15527,6 +15525,8 @@ instruction\n\
                     'utf8'
                 ) || '{}')
             );
+            console.error('\n' + local.env.MODE_BUILD + ' - merged test-report from file://' +
+                local.env.npm_config_file_test_report_merge);
         }
         break;
     }
