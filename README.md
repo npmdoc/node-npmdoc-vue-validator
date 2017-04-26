@@ -1,6 +1,6 @@
 # npmdoc-vue-validator
 
-#### api documentation for  [vue-validator (v2.1.7)](https://github.com/vuejs/vue-validator)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-validator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-validator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-validator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-validator)
+#### basic api documentation for  [vue-validator (v2.1.7)](https://github.com/vuejs/vue-validator)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-validator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-validator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-validator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-validator)
 
 #### Validator component for Vue.js
 
@@ -132,7 +132,8 @@
         "test": "npm run ci",
         "unit": "karma start config/karma.conf.js"
     },
-    "version": "2.1.7"
+    "version": "2.1.7",
+    "bin": {}
 }
 ```
 
